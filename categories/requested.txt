@@ -1,21 +1,20 @@
-
 drums
 sun
 laptop
 anvil
-baseball_bat
+baseball bat
 ladder
 eyeglasses
 grapes
 book
 dumbbell
-traffic_light
+traffic light
 wristwatch
 wheel
 shovel
 bread
 table
-tennis_racquet
+tennis racquet
 cloud
 chair
 headphones
@@ -24,25 +23,25 @@ eye
 airplane
 snake
 lollipop
-power_outlet
+power outlet
 pants
 mushroom
 star
 sword
 clock
-hot_dog
+hot dog
 syringe
-stop_sign
+stop sign
 mountain
-smiley_face
+smiley face
 apple
 bed
 shorts
 broom
-diving_board
+diving board
 flower
 spider
-cell_phone
+cell phone
 car
 camera
 tree
@@ -64,32 +63,32 @@ pillow
 scissors
 t-shirt
 tooth
-alarm_clock
-paper_clip
+alarm clock
+paper clip
 spoon
 microphone
 candle
 pencil
 envelope
 saw
-frying_pan
+frying pan
 screwdriver
 helmet
 bridge
-light_bulb
-ceiling_fan
+light bulb
+ceiling fan
 key
 donut
 bird
 circle
 beard
-coffee_cup
+coffee cup
 butterfly
 bench
 rifle
 cat
 sock
-ice_cream
+ice cream
 moustache
 suitcase
 hammer
