@@ -30,7 +30,22 @@ $(function() {
     canvas.on('mouse:move', function(e) {
         recordCoor(e)
     });
+    // Read the file to randomly select category
+    readModelledFile();
 })
+
+/*
+Read the modelled.text file
+*/
+function readModelledFile(){
+    var lines_in_file = [];
+    var file_reader = new FileReader();
+    file_reader.onload = function(fileEvent){
+        console.log(this.result);
+        lines_in_file = this.result.split("\n");
+    }
+    file_reader.readAsText("./model/modelled.txt");
+}
 
 /*
 set the table of the predictions 
@@ -142,10 +157,7 @@ function getClassNames(indices) {
 load the class names 
 */
 async function loadDict() {
-    if (mode == 'ar')
-        loc = 'model2/class_names_ar.txt'
-    else
-        loc = 'model2/class_names.txt'
+    loc = 'model/modelled.txt'
     
     await $.ajax({
         url: loc,
@@ -222,7 +234,7 @@ async function start(cur_mode) {
     mode = cur_mode
     
     //load the model 
-    model = await tf.loadLayersModel('model2/model.json')
+    model = await tf.loadLayersModel('model/model.json')
     
     //warm up 
     model.predict(tf.zeros([1, 28, 28, 1]))
@@ -239,10 +251,8 @@ allow drawing on canvas
 */
 function allowDrawing() {
     canvas.isDrawingMode = 1;
-    if (mode == 'en')
-        document.getElementById('status').innerHTML = 'Model Loaded';
-    else
-        document.getElementById('status').innerHTML = 'تم التحميل';
+    // TODO: set this property with object to be drawn
+    // document.getElementById('status').innerHTML = 'Model Loaded';
     $('button').prop('disabled', false);
     var slider = document.getElementById('myRange');
     slider.oninput = function() {
