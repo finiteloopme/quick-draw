@@ -3,7 +3,7 @@ module github.com/finiteloopme/quick-draw/webapp
 go 1.18
 
 require (
-	github.com/finiteloopme/goutils v0.0.0-20220331014600-9bc292d38525
+	github.com/finiteloopme/goutils v0.0.0-20220706031634-efa3dfb02337
 	github.com/kelseyhightower/envconfig v1.4.0
 )
 

@@ -189,6 +189,17 @@ function findIndicesOfMax(inp, count) {
             outp.pop(); // remove the last index (index of smallest element in output array)
         }
     }
+    // include selectedCategory as the top index
+    selectedCategoryIndex = classNames.indexOf(selectedCategory)
+    outpIndex = outp.indexOf(selectedCategory)
+    // Check if the selectedCategory is already in predictions
+    if ( outpIndex > 0){
+        // Remove selectedCategory from predictions
+        outp.slice(outpIndex, 1)
+    } else {
+    // Add selectedCategory to the top of predictions
+        outp.push(selectedCategoryIndex)
+    }
     return outp;
 }
 
