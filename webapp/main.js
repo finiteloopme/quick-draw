@@ -8,6 +8,7 @@ var canvas;
 var coords = [];
 var mousePressed = false;
 var mode;
+var selectedCategory;
 
 /*
 prepare the drawing canvas 
@@ -30,21 +31,17 @@ $(function() {
     canvas.on('mouse:move', function(e) {
         recordCoor(e)
     });
-    // Read the file to randomly select category
-    readModelledFile();
 })
 
 /*
-Read the modelled.text file
+Randomly select a category
 */
-function readModelledFile(){
-    var lines_in_file = [];
-    var file_reader = new FileReader();
-    file_reader.onload = function(fileEvent){
-        console.log(this.result);
-        lines_in_file = this.result.split("\n");
-    }
-    file_reader.readAsText("./model/modelled.txt");
+function randomCategorySelection(){
+    var length = classNames.length
+    //document.getElementById("status").innerHTML
+    var selected = classNames[Math.floor(Math.random() * length)]
+    document.getElementById("status").innerHTML = "Draw " + selected
+    return selected 
 }
 
 /*
@@ -174,6 +171,8 @@ function success(data) {
         let symbol = lst[i]
         classNames[i] = symbol
     }
+    // Randomly select category
+    selectedCategory = randomCategorySelection()
 }
 
 /*
